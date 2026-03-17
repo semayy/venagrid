@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>venacoffeeco - 30-Day Content Strategy (IG + WP Blog)</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Chosen Palette: Warm Neutrals & Muted Gold (Background: #F9F9F9, Text: #111111, Accent: #C5A059, Card: #FFFFFF, Blue/Blog: #1E40AF) -->
+    <!-- Application Structure Plan: Upgraded the Daily Content UI to a highly professional dashboard layout. Each day is a distinct block with clear columns for Feed (1080x1350), Story (1080x1920), and WordPress Blog (1200x630). Absolute dimensions and aspect ratios are strictly enforced using Tailwind to give an accurate preview of the final assets. All SVG tags have been removed in compliance with strict constraints, replaced by CSS shapes and Unicode. -->
+    <!-- Visualization & Content Choices: Realistic strict aspect ratio containers. Added Blog dimension to Chart.js. Enhanced filtering mechanism to include WordPress articles. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #F9F9F9; 
+            color: #111111; 
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, .font-serif { 
+            font-family: 'Playfair Display', serif; 
+        }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .filter-btn.active {
+            background-color: #111111;
+            color: #FFFFFF;
+            border-color: #111111;
+        }
+
+        .ig-story-ring {
+            padding: 3px;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            border-radius: 50%;
+        }
+        
+        .ig-story-inner {
+            border: 2px solid white;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:justify-between md:h-20">
+                <div class="flex items-center justify-center md:justify-start h-14 md:h-full border-b border-gray-100 md:border-none">
+                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-wide text-[#111111]">venacoffee<span class="text-[#C5A059]">co.</span></span>
+                    <span class="ml-4 text-[10px] uppercase tracking-widest text-gray-400 border-l border-gray-300 pl-4 hidden sm:block">Content Architecture</span>
+                </div>
+                <div class="flex space-x-6 overflow-x-auto no-scrollbar items-center justify-start md:justify-end text-sm sm:text-base whitespace-nowrap px-2 py-3 md:py-0">
+                    <a href="#section-grid" class="text-[10px] sm:text-xs uppercase tracking-widest font-semibold text-gray-500 hover:text-[#C5A059] transition-colors">IG Profile View</a>
+                    <a href="#section-analytics" class="text-[10px] sm:text-xs uppercase tracking-widest font-semibold text-gray-500 hover:text-[#C5A059] transition-colors">Analytics</a>
+                    <a href="#section-seo" class="text-[10px] sm:text-xs uppercase tracking-widest font-semibold text-gray-500 hover:text-[#C5A059] transition-colors">AI & GEO SEO</a>
+                    <a href="#section-content" class="text-[10px] sm:text-xs uppercase tracking-widest font-semibold text-gray-500 hover:text-[#C5A059] transition-colors">Daily Content Hub</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 w-full space-y-16">
+
+        <section class="bg-white p-6 sm:p-10 border border-gray-200 text-center sm:text-left shadow-sm rounded-xl">
+            <span class="text-[#C5A059] uppercase tracking-widest text-[10px] sm:text-xs font-bold mb-2 block">Omnichannel Strategy Report</span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-[#111111] mb-4 leading-tight">30-Day IG & Blog Hub</h1>
+            <p class="text-base sm:text-lg text-gray-600 font-light max-w-3xl">
+                Bu dashboard; Instagram gönderilerinizi (1080x1350), Hikaye & Reels'lerinizi (1080x1920) ve yeni eklenen SEO uyumlu WordPress Blog içeriklerinizi (1200x630) tek merkezden yönetmenizi sağlar. Tüm görsellerin üzerine tıklayarak kendi çekimlerinizle değiştirebilirsiniz.
+            </p>
+        </section>
+
+        <!-- INSTAGRAM PROFILE MOCKUP SECTION -->
+        <section id="section-grid" class="scroll-mt-24 max-w-4xl mx-auto">
+            <div class="mb-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-serif text-[#111111] mb-2">📱 Profile Grid Simulation</h2>
+                    <p class="text-sm text-gray-500 font-light">
+                        Profil görünümü (1:1 kırpılmış hali). Fotoğrafları değiştirmek veya o günün ölçülü detayına gitmek için üzerlerine gelin.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                <!-- IG Header -->
+                <div class="px-4 py-3 border-b border-gray-100 flex items-center justify-between bg-white sticky top-0 z-10">
+                    <div class="flex items-center gap-2">
+                        <span class="font-bold text-lg">venacoffeeco</span>
+                        <span class="text-blue-500 text-lg">☑</span>
+                    </div>
+                    <div class="flex gap-4 font-bold text-xl text-gray-700">
+                        <span>+</span>
+                        <span>☰</span>
+                    </div>
+                </div>
+
+                <!-- IG Profile Info -->
+                <div class="p-4 sm:p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="ig-story-ring w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 cursor-pointer">
+                            <div class="ig-story-inner w-full h-full bg-white flex items-center justify-center">
+                                <span class="font-serif font-bold text-2xl">V.</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 sm:gap-10 text-center flex-grow justify-center">
+                            <div>
+                                <span class="font-bold block text-lg">30</span>
+                                <span class="text-sm text-gray-800">Posts</span>
+                            </div>
+                            <div>
+                                <span class="font-bold block text-lg">12.5K</span>
+                                <span class="text-sm text-gray-800">Followers</span>
+                            </div>
+                            <div>
+                                <span class="font-bold block text-lg">1</span>
+                                <span class="text-sm text-gray-800">Following</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h2 class="font-bold text-sm">venacoffeeco.</h2>
+                        <p class="text-sm text-gray-500">Coffee Shop</p>
+                        <p class="text-sm">Multi-layered Urban Escape 🌿<br>"Enjoy your pause."<br>📍 Atakule, Ankara</p>
+                        <a href="#" class="text-sm text-blue-900 font-medium">linktr.ee/venacoffeeco</a>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <button class="bg-gray-100 font-semibold text-sm px-4 py-1.5 rounded-lg flex-grow hover:bg-gray-200">Following</button>
+                        <button class="bg-gray-100 font-semibold text-sm px-4 py-1.5 rounded-lg flex-grow hover:bg-gray-200">Message</button>
+                    </div>
+                </div>
+
+                <!-- IG Tabs -->
+                <div class="flex border-t border-gray-200 mt-2">
+                    <button id="ig-tab-grid" onclick="switchIGTab('grid')" class="flex-1 flex justify-center items-center py-3 border-t-2 border-black -mt-[1px] text-black transition-colors font-bold text-xl">
+                        ⊞
+                    </button>
+                    <button id="ig-tab-reels" onclick="switchIGTab('reels')" class="flex-1 flex justify-center items-center py-3 text-gray-400 hover:text-gray-600 transition-colors font-bold text-xl cursor-pointer">
+                        ▶
+                    </button>
+                </div>
+
+                <!-- IG Real Grid (1:1 Aspect Ratio) -->
+                <div class="grid grid-cols-3 gap-0.5 sm:gap-1 bg-white" id="visual-grid-container">
+                    <!-- JS Grid Injection -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ANALYTICS SECTION -->
+        <section id="section-analytics" class="scroll-mt-24">
+            <div class="mb-4 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-serif text-[#111111] mb-2">📊 Omnichannel Distribution</h2>
+                    <p class="text-sm text-gray-500 font-light">Instagram (Feed/Reels) ve Web (WP Blog) içerik dağılımı grafiği.</p>
+                </div>
+                <div class="flex gap-2">
+                    <div class="bg-[#111111] text-white px-4 py-2 text-center rounded">
+                        <span class="block text-xl font-serif text-[#C5A059]">30</span>
+                        <span class="text-[9px] uppercase tracking-widest">Stories</span>
+                    </div>
+                    <div class="bg-blue-50 text-blue-900 border border-blue-200 px-4 py-2 text-center rounded">
+                        <span class="block text-xl font-serif">8</span>
+                        <span class="text-[9px] uppercase tracking-widest font-bold">WP Blogs</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 sm:p-10 border border-gray-200 flex justify-center items-center rounded-xl shadow-sm">
+                <div class="chart-container">
+                    <canvas id="formatChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- DAILY CONTENT ENGINE (THE NEW UI) -->
+        <section id="section-content" class="scroll-mt-24">
+            <div class="mb-6 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 border-b border-gray-200 pb-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-2xl sm:text-3xl font-serif text-[#111111] mb-2">🗓️ Daily Content Hub</h2>
+                    <p class="text-sm text-gray-500 font-light">
+                        Sosyal medya gönderileri <strong>1080x1350px</strong> (4:5), Hikaye/Reels <strong>1080x1920px</strong> (9:16) ve WordPress Blog kapakları <strong>1200x630px</strong> (16:9) standartlarındadır. Kutucukların en boy oranları birebir ölçülendirilmiştir.
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterContent('All')" id="filter-All" class="filter-btn active px-4 py-2 border border-gray-300 rounded text-xs uppercase tracking-widest font-semibold text-gray-600 transition-colors hover:border-[#111111] hover:text-[#111111]">All</button>
+                    <button onclick="filterContent('Post')" id="filter-Post" class="filter-btn px-4 py-2 border border-gray-300 rounded text-xs uppercase tracking-widest font-semibold text-gray-600 transition-colors hover:border-[#111111] hover:text-[#111111]">Posts (4:5)</button>
+                    <button onclick="filterContent('Reels')" id="filter-Reels" class="filter-btn px-4 py-2 border border-gray-300 rounded text-xs uppercase tracking-widest font-semibold text-gray-600 transition-colors hover:border-[#111111] hover:text-[#111111]">Reels (9:16)</button>
+                    <button onclick="filterContent('Blog')" id="filter-Blog" class="filter-btn px-4 py-2 border border-blue-200 bg-blue-50 text-blue-800 rounded text-xs uppercase tracking-widest font-bold transition-colors hover:bg-blue-100">WP Blogs</button>
+                </div>
+            </div>
+
+            <div class="space-y-10" id="content-list-container">
+                <!-- JS Content Injection -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#111111] text-white py-12 mt-12 border-t border-[#333]">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="font-serif text-2xl tracking-wide mb-3 block">venacoffee<span class="text-[#C5A059]">co.</span></span>
+            <p class="text-xs text-gray-400 font-light">Omnichannel Strategy Dashboard &copy; 2026</p>
+        </div>
+    </footer>
+
+    <!-- Global File Uploader for Images -->
+    <input type="file" id="global-image-uploader" class="hidden" accept="image/*" onchange="handleImageUpload(event)">
+
+    <script>
+        // Comprehensive 30-Day Data Model including 8 WP Blogs
+        const contentData = [
+            {
+                day: 1,
+                title: "Under The Glass Roof",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05623_HDR.jpg",
+                caption: "Under the glass roof, surrounded by nature, right in the heart of the city. Step out of the rush and into your new favorite urban escape. 🌿☕️\n\n🇹🇷 Cam tavanın altında, doğayla iç içe, şehrin tam kalbinde. Aceleye bir mola verin ve yeni favori kaçış noktanıza adım atın. Kendinize zaman ayırın. 🌿☕️",
+                seo: "Ankara urban escape, Atakule coffee shop, botanical cafe Çankaya",
+                hashtags: "#venacoffeeco #Atakule #EnjoyYourPause",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05653_HDR.jpg",
+                    caption: "Good morning from our botanical sanctuary! ☀️\n🇹🇷 Botanik sığınağımızdan günaydın! ☀️",
+                    interaction: "Poll: Here with us / At work"
+                },
+                blog: {
+                    title: "Welcome to venacoffeeco: Ankara's New Urban Escape",
+                    excerpt: "Discover the inspiration behind Atakule's newest specialty coffee destination, where natural botanical design meets premium coffee culture.",
+                    seo: "best cafe Atakule, botanical coffee shop Ankara, venacoffeeco opening",
+                    blogImg: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1200&h=630&fit=crop&q=80",
+                    suggestedFile: "MLH05658_HDR.jpg"
+                }
+            },
+            {
+                day: 2,
+                title: "Served With Care",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1507133750070-4ed01531e285?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05287.jpg",
+                caption: "Crafted with precision, served with a smile. Every cup poured is designed to give you the perfect break. Best specialty coffee in Çankaya.\n\n🇹🇷 Özenle hazırlandı, gülümsemeyle sunuldu. Çankaya'nın en iyi nitelikli kahvesi, tam da ihtiyacınız olduğu anda.",
+                seo: "Specialty coffee Ankara, barista craft",
+                hashtags: "#AnkaraCafe #BaristaLife #Çankaya",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05268.jpg",
+                    caption: "Your daily fuel is ready.\n🇹🇷 Günlük enerjiniz hazır.",
+                    interaction: "Question Box: What's your order?"
+                }
+            },
+            {
+                day: 3,
+                title: "The Table Setup",
+                format: "Carousel",
+                feedImg: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05380.jpg",
+                caption: "Give yourself the pause you truly deserve. The perfect setup for your afternoon escape. ✨\n\n🇹🇷 Gerçekten hak ettiğiniz molayı kendinize verin. Öğleden sonra kaçamağınız için mükemmel bir masa. ✨",
+                seo: "Aesthetic coffee shop, coffee date Ankara",
+                hashtags: "#AnkaraDesserts #AtakuleAnkara #UrbanEscape",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05384.jpg",
+                    caption: "The perfect afternoon setup. 👇\n🇹🇷 Kusursuz bir öğleden sonra. 👇",
+                    interaction: "Mention Sticker (@)"
+                }
+            },
+            {
+                day: 4,
+                title: "Take Your Pause Anywhere",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05295.jpg",
+                caption: "On the go? Bring the venacoffeeco experience with you wherever the city takes you. 🚶‍♂️💼\n\n🇹🇷 Aceleniz mi var? Şehir sizi nereye götürürse götürsün, venacoffeeco deneyimini yanınızda taşıyın. 🚶‍♂️💼",
+                seo: "Takeaway coffee Ankara, premium coffee Atakule",
+                hashtags: "#TakeawayCoffee #VenaCoffeeCo",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05297.jpg",
+                    caption: "Grab & Go, but make it premium. 🖤\n🇹🇷 Al ve Çık, ama en premium haliyle. 🖤",
+                    interaction: "Location Tag: Atakule"
+                }
+            },
+            {
+                day: 5,
+                title: "Morning Light",
+                format: "Reels",
+                feedImg: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=1080&h=1920&fit=crop&q=80", // 9:16 base
+                suggestedFile: "MLH04837_HDR.jpg",
+                caption: "Morning rituals elevate the rest of your day. Start slow with the best light in Ankara. ☀️\n\n🇹🇷 Sabah ritüelleri günün geri kalanını güzelleştirir. Şehir uyanmadan önce kendinize bir an ayırın. ☀️",
+                seo: "Morning coffee Ankara, calm workspace cafe",
+                hashtags: "#MorningRoutine #EnjoyYourPause",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH04782_HDR.jpg",
+                    caption: "The calmest corner in the city. 🌿\n🇹🇷 Şu an şehrin en sakin köşesi. 🌿",
+                    interaction: "Hashtag: #EnjoyYourPause"
+                },
+                blog: {
+                    title: "The Morning Ritual: Why Specialty Coffee Matters",
+                    excerpt: "A deep dive into the beans, the extraction process, and why starting your morning with a quality cup transforms your entire day.",
+                    seo: "specialty coffee guide Ankara, morning coffee Atakule, coffee extraction",
+                    blogImg: "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1200&h=630&fit=crop&q=80",
+                    suggestedFile: "MLH05388.jpg"
+                }
+            },
+            {
+                day: 6,
+                title: "The Details",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1447015237013-0e80b2786ddc?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH04937_HDR.jpg",
+                caption: "Pause. Breathe. Sip. Make venacoffeeco your sanctuary today. 🌿\n\n🇹🇷 Durakla. Nefes al. Yudumla. Bugün venacoffeeco'yu sığınağınız yapın. 🌿",
+                seo: "Relaxing cafe Ankara, self-care routine",
+                hashtags: "#Mindfulness #SlowLiving",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH04977_HDR.jpg",
+                    caption: "A gentle reminder: You deserve a break today. 🤎\n🇹🇷 Bugün bir molayı hak ediyorsunuz. 🤎",
+                    interaction: "Reminder Sticker"
+                }
+            },
+            {
+                day: 7,
+                title: "Design Meets Coffee",
+                format: "Carousel",
+                feedImg: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05052_HDR.jpg",
+                caption: "Where architectural elegance meets specialty coffee. Experience the most aesthetic coffee bar in Atakule. 🤍\n\n🇹🇷 Mimari zarafetin nitelikli kahveyle buluştuğu yer. Atakule'nin en estetik kahve barını deneyimleyin. 🤍",
+                seo: "Aesthetic cafe Ankara, interior design",
+                hashtags: "#CafeDesign #InteriorArchitecture",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1546825590-09fa4cb78e34?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05508_HDR.jpg",
+                    caption: "Design details to stay all day. ✨\n🇹🇷 Bütün gün kalmak isteyeceğiniz detaylar. ✨",
+                    interaction: "Emoji Slider: 🤍"
+                }
+            },
+            {
+                day: 8,
+                title: "The Experience",
+                format: "Reels",
+                feedImg: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=1080&h=1920&fit=crop&q=80",
+                suggestedFile: "MLH05388.jpg",
+                caption: "More than just a cup of coffee. Let us serve you the perfect pause today. ✨\n\n🇹🇷 Sadece bir fincan kahveden çok daha fazlası. Bugün size mükemmel molayı sunmamıza izin verin. ✨",
+                seo: "Coffee experience Ankara, luxury cafe",
+                hashtags: "#CoffeeRitual #EnjoyYourPause",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1502741126161-b048400d085d?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05370.jpg",
+                    caption: "Serving aesthetics. 🤎\n🇹🇷 Estetiğin sunumu. 🤎",
+                    interaction: "Link: View Menu"
+                }
+            },
+            {
+                day: 9,
+                title: "The Evening Vibe",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05518_HDR.jpg",
+                caption: "Where Ankara's evening energy meets absolute calm. Come for the coffee, stay for the vibe. 🌆\n\n🇹🇷 Ankara'nın akşam enerjisinin mutlak sükunetle buluştuğu yer. Kahve için gelin, atmosfer için kalın. 🌆",
+                seo: "Evening cafe Ankara, late night coffee",
+                hashtags: "#AnkaraNights #AtakuleVibes",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05538_HDR.jpg",
+                    caption: "Evening mood is setting in. 🍸\n🇹🇷 Akşam modu başlıyor. 🍸",
+                    interaction: "Poll: On my way! / Tomorrow"
+                },
+                blog: {
+                    title: "Mindful Mixology: The Rise of Alcohol-Free Evenings",
+                    excerpt: "Why the Zero Proof movement is taking over Ankara, and how our Mixology menu offers a sophisticated alternative for your evening social hours.",
+                    seo: "alcohol free cocktails Ankara, zero proof Atakule, evening cafe mocktails",
+                    blogImg: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=1200&h=630&fit=crop&q=80",
+                    suggestedFile: "MLH05374.jpg"
+                }
+            },
+            {
+                day: 10,
+                title: "Perfect Pairings",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05342.jpg",
+                caption: "A match made in Atakule. Elevate your coffee break with combinations designed to delight your palate. 🍫🍵\n\n🇹🇷 Atakule'de mükemmel uyum. Damağınızı şenlendirmek için tasarlanmış kombinasyonlarla kahve molanızı taçlandırın. 🍫🍵",
+                seo: "Best desserts Ankara, coffee pairings",
+                hashtags: "#CoffeePairing #SpecialtyCoffee",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1498604294026-616172551e73?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05347.jpg",
+                    caption: "Today's perfect pair. ✨\n🇹🇷 Bugünün mükemmel ikilisi. ✨",
+                    interaction: "Heart Button"
+                }
+            },
+            {
+                day: 11,
+                title: "The Gathering",
+                format: "Reels",
+                feedImg: "https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?w=1080&h=1920&fit=crop&q=80",
+                suggestedFile: "MLH05643_HDR.jpg",
+                caption: "Spaces designed for connection. There is a perfect spot for everyone under the trees of venacoffeeco. 🌿💬\n\n🇹🇷 Bağlantı kurmak için tasarlanmış alanlar. Ağaçlarımızın altında herkes için mükemmel bir yer var. 🌿💬",
+                seo: "Group friendly cafe Ankara, workspace cafe",
+                hashtags: "#CoffeeCommunity #GatheringPlace",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05648_HDR.jpg",
+                    caption: "Tag who you're bringing this weekend! 👇\n🇹🇷 Kimi getiriyorsun, etiketle! 👇",
+                    interaction: "Mention Sticker (@)"
+                }
+            },
+            {
+                day: 12,
+                title: "The Packaging",
+                format: "Carousel",
+                feedImg: "https://images.unsplash.com/photo-1529868612185-3e284a14ce7b?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05317.jpg",
+                caption: "Take a piece of the venacoffeeco aesthetic home with you. Premium details in everything we do. 🖤\n\n🇹🇷 venacoffeeco estetiğinden bir parçayı evinize götürün. Yaptığımız her şeyde premium detaylar. 🖤",
+                seo: "Premium coffee brand Ankara",
+                hashtags: "#VenaStyle #CoffeeBrand",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05324.jpg",
+                    caption: "Details matter. 🖤 Take Vena home.\n🇹🇷 Detaylar önemlidir. 🖤",
+                    interaction: "Link: Shop Now"
+                }
+            },
+            {
+                day: 13,
+                title: "Your Sanctuary",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH04747_HDR.jpg",
+                caption: "Your private sanctuary in the middle of the city. The most inspiring workspace in Çankaya is waiting for you. 💻☕️\n\n🇹🇷 Şehrin ortasındaki özel sığınağınız. Çankaya'nın en ilham verici çalışma alanı sizi bekliyor. 💻☕️",
+                seo: "Freelance workspace Ankara, digital nomad spots",
+                hashtags: "#WorkCafe #CreativeSpace",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH04767_HDR.jpg",
+                    caption: "Need a place to focus? 💻\n🇹🇷 Odaklanacak bir yere mi ihtiyacınız var?",
+                    interaction: "Link: Get Directions"
+                }
+            },
+            {
+                day: 14,
+                title: "The Green Details",
+                format: "Reels",
+                feedImg: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=1080&h=1920&fit=crop&q=80",
+                suggestedFile: "MLH04972_HDR.jpg",
+                caption: "Take a deep breath under our indoor trees and let the stress melt away. This is what a true break feels like. 🌿✨\n\n🇹🇷 İç mekan ağaçlarımızın altında derin bir nefes alın. Gerçek bir mola tam olarak böyle hissettirir. 🌿✨",
+                seo: "Botanical cafe Ankara, nature inspired coffee",
+                hashtags: "#BotanicalCafe #IndoorTrees",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH04982_HDR.jpg",
+                    caption: "Nature indoors. 🌿\n🇹🇷 İçeride doğa. 🌿",
+                    interaction: "Music Sticker"
+                },
+                blog: {
+                    title: "Bringing Nature Indoors: The Design Philosophy of Vena",
+                    excerpt: "Explore how biophilic design shapes the calm and inspiring atmosphere of venacoffeeco, creating an oasis in the city.",
+                    seo: "biophilic cafe design, Ankara aesthetic spaces, Atakule architecture",
+                    blogImg: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1200&h=630&fit=crop&q=80",
+                    suggestedFile: "MLH04822_HDR.jpg"
+                }
+            },
+            {
+                day: 15,
+                title: "The Grand Interior",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1494621930069-4fd4b2e24a11?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05658_HDR.jpg",
+                caption: "In a world that never stops, taking a moment for yourself is a luxury. Simply enjoy your pause. 🖤\n\n🇹🇷 Hiç durmayan bir dünyada, kendinize bir an ayırmak bir lükstür. Sadece molanızın tadını çıkarın. 🖤",
+                seo: "Luxury cafe Ankara, relax in Atakule",
+                hashtags: "#EnjoyYourPause #UrbanEscape",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1502462041640-b3d7e50d0662?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05663_HDR.jpg",
+                    caption: "See you at Atakule this weekend. 🖤\n🇹🇷 Bu hafta sonu Atakule'de görüşürüz. 🖤",
+                    interaction: "Location Tag: Atakule"
+                }
+            },
+            {
+                day: 16,
+                title: "The Silent Corner",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1511886929837-354d827aae26?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH04847_HDR.jpg",
+                caption: "Sometimes the best ideas come when you simply look out the window. The perfect view awaits you at Atakule. 🌿\n\n🇹🇷 Bazen en iyi fikirler sadece pencereden dışarı baktığınızda gelir. Atakule'de mükemmel manzara sizi bekliyor. 🌿",
+                seo: "Quiet cafe in Ankara, Atakule coffee shop view",
+                hashtags: "#SilentCorner #FocusTime",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1495474472204-5ce1328994bb?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH04952_HDR.jpg",
+                    caption: "Current mood: Unbothered. 🤎\n🇹🇷 Şu anki mod: Rahatsız edilmeyen. 🤎",
+                    interaction: "Emoji Slider: ☕️"
+                }
+            },
+            {
+                day: 17,
+                title: "Pouring Perfection",
+                format: "Reels",
+                feedImg: "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1080&h=1920&fit=crop&q=80",
+                suggestedFile: "MLH05268.jpg",
+                caption: "A symphony in every cup. Watch the art of the perfect pour. Only the best specialty beans at Atakule. ✨\n\n🇹🇷 Her fincanda bir senfoni. Mükemmel dökümün sanatını izleyin. Sadece en iyi nitelikli çekirdekler. ✨",
+                seo: "Specialty coffee pour Ankara, latte art Atakule",
+                hashtags: "#CoffeeArt #BaristaSkills",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05380.jpg",
+                    caption: "Liquid gold. ☕️\n🇹🇷 Sıvı altın. ☕️",
+                    interaction: "Poll: Yes! / On my way"
+                }
+            },
+            {
+                day: 18,
+                title: "Healthy Choices",
+                format: "Carousel",
+                feedImg: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH04927_HDR.jpg",
+                caption: "Nourish your body in an environment that nourishes your soul. A complete holistic experience at Atakule. 🍏🌿\n\n🇹🇷 Ruhunuzu besleyen bir ortamda vücudunuzu da besleyin. Atakule'de tam bir bütünsel deneyim. 🍏🌿",
+                seo: "Holistic cafe Ankara, healthy detox",
+                hashtags: "#HolisticLiving #BotanicalCafe",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH04932_HDR.jpg",
+                    caption: "Breathe in. Breathe out. 🌿\n🇹🇷 Nefes al. Nefes ver. 🌿",
+                    interaction: "Hashtag: #UrbanEscape"
+                },
+                blog: {
+                    title: "Elixir Lab: Refreshing Your Body with Natural Detox",
+                    excerpt: "Why cold-pressed, zero-sugar detox drinks are the perfect post-run refreshment for your active lifestyle.",
+                    seo: "Ankara healthy cafe, detox juice Atakule, wellness lifestyle",
+                    blogImg: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=1200&h=630&fit=crop&q=80",
+                    suggestedFile: "MLH05628_HDR.jpg"
+                }
+            },
+            {
+                day: 19,
+                title: "Evening Elegance",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05468_HDR.jpg",
+                caption: "When the sun goes down, the ambiance elevates. Meet us for premium mocktails and deep conversations. 🌙✨\n\n🇹🇷 Güneş battığında ambiyans yükselir. Premium mocktail'ler ve derin sohbetler için bizimle buluşun. 🌙✨",
+                seo: "Evening ambiance cafe Ankara, luxury coffee shop night",
+                hashtags: "#AnkaraNights #EveningVibe",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05473_HDR.jpg",
+                    caption: "Night mode: ON. 🍸\n🇹🇷 Gece modu: AÇIK. 🍸",
+                    interaction: "Location Tag: Atakule"
+                }
+            },
+            {
+                day: 20,
+                title: "The Mocktail Art",
+                format: "Reels",
+                feedImg: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=1080&h=1920&fit=crop&q=80",
+                suggestedFile: "MLH05295.jpg",
+                caption: "Zero proof, maximum flavor. Welcome to our Mindful Mixology experience. Cheers to the evening! 🥂\n\n🇹🇷 Sıfır alkol, maksimum lezzet. Mindful Mixology deneyimimize hoş geldiniz. İyi akşamlara! 🥂",
+                seo: "Zero proof cocktails Ankara, alcohol-free",
+                hashtags: "#ZeroProof #MocktailArt",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1502741126161-b048400d085d?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05374.jpg",
+                    caption: "Which mocktail are you trying tonight?\n🇹🇷 Bu akşam hangisini deniyorsunuz?",
+                    interaction: "Link: View Mixology Menu"
+                }
+            },
+            {
+                day: 21,
+                title: "Botanical Escape",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH04822_HDR.jpg",
+                caption: "A sanctuary where natural textures meet modern design. We designed every corner to make you feel at peace. 🌿🤍\n\n🇹🇷 Doğal dokuların modern tasarımla buluştuğu bir sığınak. Her köşeyi huzur bulmanız için tasarladık. 🌿🤍",
+                seo: "Nature inspired cafe Ankara, interior design Atakule",
+                hashtags: "#NaturalDesign #InteriorInspo",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH04827_HDR.jpg",
+                    caption: "Find your calm under the trees. 🌳\n🇹🇷 Ağaçların altında huzurunuzu bulun. 🌳",
+                    interaction: "Heart Button"
+                }
+            },
+            {
+                day: 22,
+                title: "Sweet Indulgence",
+                format: "Carousel",
+                feedImg: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05112_HDR.jpg",
+                caption: "Life is short, make it sweet. Our dessert selection is perfectly curated to pair with our specialty coffee. 🍰✨\n\n🇹🇷 Hayat kısa, onu tatlandırın. Tatlı seçkimiz, nitelikli kahvemizle mükemmel bir şekilde eşleşmesi için özenle seçildi. 🍰✨",
+                seo: "French pastry Ankara, luxury desserts Atakule",
+                hashtags: "#FrenchPastry #AnkaraDesserts",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05117_HDR.jpg",
+                    caption: "Today's dilemma... which one? 🤤\n🇹🇷 Bugünün ikilemi... hangisi? 🤤",
+                    interaction: "Poll: Left one / Right one"
+                },
+                blog: {
+                    title: "A Sweet Symphony: French Pastries You Must Try",
+                    excerpt: "From the delicate Dacquoise to the rich Poland Cake, explore the craftsmanship behind our exclusive dessert menu.",
+                    seo: "French desserts Ankara, best pastries Atakule, coffee and cake pairing",
+                    blogImg: "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=1200&h=630&fit=crop&q=80",
+                    suggestedFile: "MLH05112_HDR.jpg"
+                }
+            },
+            {
+                day: 23,
+                title: "Work & Coffee",
+                format: "Reels",
+                feedImg: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1080&h=1920&fit=crop&q=80",
+                suggestedFile: "MLH05072_HDR.jpg",
+                caption: "Change your scenery, elevate your productivity. The ultimate workspace awaits at Atakule. 💻☕️\n\n🇹🇷 Manzaranızı değiştirin, üretkenliğinizi artırın. Nihai çalışma alanı Atakule'de sizi bekliyor. 💻☕️",
+                seo: "Best cafe to work in Ankara, digital nomad Atakule",
+                hashtags: "#RemoteWork #WorkspaceGoals",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05077_HDR.jpg",
+                    caption: "Your new office for the day. 💼\n🇹🇷 Bugünlük yeni ofisiniz. 💼",
+                    interaction: "Hashtag: #RemoteWorking"
+                }
+            },
+            {
+                day: 24,
+                title: "Vena Tote Bag",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1529868612185-3e284a14ce7b?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05297.jpg",
+                caption: "Carry the Vena aesthetic with you. Our premium packaging reflects our commitment to design. 🖤\n\n🇹🇷 Vena estetiğini yanınızda taşıyın. Tasarıma olan bağlılığımızı yansıtıyor. 🖤",
+                seo: "Premium coffee merch Ankara, Vena tote bag",
+                hashtags: "#VenaStyle #ToteBag",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05317.jpg",
+                    caption: "Available now. Have you got yours? 🖤\n🇹🇷 Şimdi mağazada. Aldınız mı? 🖤",
+                    interaction: "Link: Shop Details"
+                }
+            },
+            {
+                day: 25,
+                title: "The Quiet Focus",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1447015237013-0e80b2786ddc?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH04737_HDR.jpg",
+                caption: "A table for one, please. Reconnect with yourself at your favorite urban escape. 🌿☕️\n\n🇹🇷 Bir kişilik masa lütfen. Favori kaçış noktanızda kendinizle yeniden bağlantı kurun. 🌿☕️",
+                seo: "Solo coffee date Ankara, peaceful cafe Çankaya",
+                hashtags: "#SoloDate #Mindfulness",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH04747_HDR.jpg",
+                    caption: "Just me and my coffee. 🤎\n🇹🇷 Sadece ben ve kahvem. 🤎",
+                    interaction: "Emoji Slider: ☕️"
+                }
+            },
+            {
+                day: 26,
+                title: "Menu Highlights",
+                format: "Carousel",
+                feedImg: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05374.jpg",
+                caption: "Curated flavors, exceptional presentation. Taste the difference at venacoffeeco. ✨\n\n🇹🇷 Özenle seçilmiş lezzetler, olağanüstü sunum. Farkı tadın. ✨",
+                seo: "Specialty cafe menu Ankara, luxury drinks",
+                hashtags: "#MenuHighlights #TasteTheDifference",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1546825590-09fa4cb78e34?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05380.jpg",
+                    caption: "Have you tried our signature drinks?\n🇹🇷 İmza içeceklerimizi denediniz mi?",
+                    interaction: "Link: Explore Menu"
+                },
+                blog: {
+                    title: "The Perfect Work-Cafe Balance in Atakule",
+                    excerpt: "How venacoffeeco caters to the modern professional with high-speed internet, ergonomic seating, and focused ambiance.",
+                    seo: "freelance cafe Ankara, best remote work spot Atakule, cafe with wifi",
+                    blogImg: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1200&h=630&fit=crop&q=80",
+                    suggestedFile: "MLH05072_HDR.jpg"
+                }
+            },
+            {
+                day: 27,
+                title: "Weekend Vibes",
+                format: "Reels",
+                feedImg: "https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?w=1080&h=1920&fit=crop&q=80",
+                suggestedFile: "MLH05608_HDR.jpg",
+                caption: "The unmistakable energy of a weekend at Vena. Your weekend starts here at Atakule. 🥂✨\n\n🇹🇷 Vena'da kusursuz hafta sonu enerjisi. Hafta sonunuz burada başlıyor. 🥂✨",
+                seo: "Weekend cafe Ankara, social cafe Atakule",
+                hashtags: "#WeekendVibes #SocialCafe",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05613_HDR.jpg",
+                    caption: "Weekend mode fully activated. 🥂\n🇹🇷 Hafta sonu modu aktif. 🥂",
+                    interaction: "Location Tag: Atakule"
+                }
+            },
+            {
+                day: 28,
+                title: "Fresh Ingredients",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05628_HDR.jpg",
+                caption: "Quality you can taste, freshness you can see. Because you deserve nothing less. 🌿🍰\n\n🇹🇷 Tadabileceğiniz kalite, görebileceğiniz tazelik. Daha azını hak etmiyorsunuz. 🌿🍰",
+                seo: "Fresh cafe food Ankara, premium ingredients",
+                hashtags: "#FreshIngredients #PremiumQuality",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1502741126161-b048400d085d?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05633_HDR.jpg",
+                    caption: "Fresh starts here. 🌿\n🇹🇷 Tazelik burada başlar. 🌿",
+                    interaction: "Heart Button"
+                }
+            },
+            {
+                day: 29,
+                title: "Golden Hour",
+                format: "Reels",
+                feedImg: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=1080&h=1920&fit=crop&q=80",
+                suggestedFile: "MLH05543_HDR.jpg",
+                caption: "That golden hour glow. The most beautiful time to enjoy your pause. 🌇✨\n\n🇹🇷 O altın saat ışıltısı. Molanızın tadını çıkarmak için en güzel zaman. 🌇✨",
+                seo: "Golden hour cafe Ankara, sunset cafe Çankaya",
+                hashtags: "#GoldenHour #AestheticCafe",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05568_HDR.jpg",
+                    caption: "Chasing the golden light. 🌇\n🇹🇷 Altın ışığın peşinde. 🌇",
+                    interaction: "Emoji Slider: ✨"
+                }
+            },
+            {
+                day: 30,
+                title: "Month Wrap: Enjoy Your Pause",
+                format: "Post",
+                feedImg: "https://images.unsplash.com/photo-1494621930069-4fd4b2e24a11?w=1080&h=1350&fit=crop&q=80",
+                suggestedFile: "MLH05593_HDR.jpg",
+                caption: "Thank you for sharing your pauses with us this month. Here’s to many more beautiful moments. 🖤☕️\n\n🇹🇷 Bu ay molalarınızı bizimle paylaştığınız için teşekkür ederiz. Çok daha fazla güzel ana. 🖤☕️",
+                seo: "Best cafe experience Ankara, venacoffeeco lifestyle",
+                hashtags: "#EnjoyYourPause #VenaCommunity",
+                story: {
+                    storyImg: "https://images.unsplash.com/photo-1502462041640-b3d7e50d0662?w=1080&h=1920&fit=crop&q=80",
+                    suggestedFile: "MLH05588_HDR.jpg",
+                    caption: "Wrapping up a beautiful month. See you tomorrow! 🖤\n🇹🇷 Güzel bir ayı tamamlıyoruz! 🖤",
+                    interaction: "Location Tag: Atakule"
+                },
+                blog: {
+                    title: "A Month in Review: Building the Vena Community",
+                    excerpt: "Reflecting on our first month at Atakule, the stories shared over coffee, and our vision for the future of urban escapes.",
+                    seo: "Ankara cafe community, Atakule events, venacoffeeco reviews",
+                    blogImg: "https://images.unsplash.com/photo-1494621930069-4fd4b2e24a11?w=1200&h=630&fit=crop&q=80",
+                    suggestedFile: "MLH05593_HDR.jpg"
+                }
+            }
+        ];
+
+        // Ensure chronological order for Instagram Grid (Newest at top-left)
+        const gridOrder = Array.from({length: 30}, (_, i) => 30 - i);
+
+        let currentUploadConfig = null;
+        let currentIGTab = 'grid';
+
+        function switchIGTab(tab) {
+            currentIGTab = tab;
+            
+            const gridTabBtn = document.getElementById('ig-tab-grid');
+            const reelsTabBtn = document.getElementById('ig-tab-reels');
+            
+            if (tab === 'grid') {
+                gridTabBtn.className = "flex-1 flex justify-center items-center py-3 border-t-2 border-black -mt-[1px] text-black transition-colors font-bold text-xl";
+                reelsTabBtn.className = "flex-1 flex justify-center items-center py-3 text-gray-400 hover:text-gray-600 transition-colors font-bold text-xl cursor-pointer";
+            } else {
+                reelsTabBtn.className = "flex-1 flex justify-center items-center py-3 border-t-2 border-black -mt-[1px] text-black transition-colors font-bold text-xl";
+                gridTabBtn.className = "flex-1 flex justify-center items-center py-3 text-gray-400 hover:text-gray-600 transition-colors font-bold text-xl cursor-pointer";
+            }
+            
+            renderGrid();
+        }
+
+        function triggerUpload(day, type) {
+            currentUploadConfig = { day, type };
+            document.getElementById('global-image-uploader').click();
+        }
+
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (!file || !currentUploadConfig) return;
+
+            const objectUrl = URL.createObjectURL(file);
+            const { day, type } = currentUploadConfig;
+
+            const dataItem = contentData.find(d => d.day === day);
+            if (dataItem) {
+                if (type === 'feed') {
+                    dataItem.feedImg = objectUrl;
+                    const imgEl = document.getElementById(`feed-img-${day}`);
+                    if (imgEl) imgEl.src = objectUrl;
+                    
+                    const gridImgEl = document.getElementById(`grid-img-${day}`);
+                    if (gridImgEl) gridImgEl.src = objectUrl;
+                } else if (type === 'story') {
+                    dataItem.story.storyImg = objectUrl;
+                    const imgEl = document.getElementById(`story-img-${day}`);
+                    if (imgEl) imgEl.src = objectUrl;
+                } else if (type === 'blog') {
+                    dataItem.blog.blogImg = objectUrl;
+                    const imgEl = document.getElementById(`blog-img-${day}`);
+                    if (imgEl) imgEl.src = objectUrl;
+                }
+            }
+            
+            event.target.value = '';
+            currentUploadConfig = null;
+        }
+
+        function scrollToDay(dayId) {
+            filterContent('All'); 
+            setTimeout(() => {
+                const element = document.getElementById(`day-card-${dayId}`);
+                if(element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    element.classList.add('ring-2', 'ring-[#C5A059]', 'ring-offset-4');
+                    setTimeout(() => element.classList.remove('ring-2', 'ring-[#C5A059]', 'ring-offset-4'), 2000);
+                }
+            }, 100);
+        }
+
+        function renderGrid() {
+            const container = document.getElementById('visual-grid-container');
+            let html = '';
+            
+            gridOrder.forEach(dayNum => {
+                const data = contentData.find(d => d.day === dayNum);
+                
+                if (currentIGTab === 'reels' && data.format !== 'Reels') return;
+                
+                let iconHtml = '';
+                if(data.format === 'Reels') {
+                    iconHtml = `<div class="absolute top-2 right-2 drop-shadow-md text-white text-xl">▶</div>`;
+                } else if (data.format === 'Carousel' && currentIGTab === 'grid') {
+                    iconHtml = `<div class="absolute top-2 right-2 drop-shadow-md text-white text-lg">⧉</div>`;
+                }
+
+                const aspectRatioClass = currentIGTab === 'grid' ? 'aspect-square' : 'aspect-[9/16]';
+
+                html += `
+                    <div class="${aspectRatioClass} bg-gray-200 relative group overflow-hidden cursor-pointer border border-gray-100">
+                        <img id="grid-img-${data.day}" src="${data.feedImg}" class="w-full h-full object-cover" loading="lazy">
+                        ${iconHtml}
+                        
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center gap-3 backdrop-blur-sm">
+                            <span class="text-white font-bold tracking-widest text-[10px]">DAY ${data.day}</span>
+                            <button onclick="scrollToDay(${data.day})" class="bg-white text-[#111111] px-5 py-2 text-xs font-bold rounded hover:bg-gray-100 transition-colors w-28">İncele</button>
+                            <button onclick="triggerUpload(${data.day}, 'feed')" class="bg-[#C5A059] text-white px-5 py-2 text-xs font-bold rounded hover:bg-[#a6864a] transition-colors w-28">Değiştir</button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            if (html === '') {
+                html = `<div class="col-span-3 p-8 text-center text-gray-500 text-sm">Bu sekmede gösterilecek içerik bulunmamaktadır.</div>`;
+            }
+            
+            container.innerHTML = html;
+        }
+
+        function renderContentList(filterType = 'All') {
+            const container = document.getElementById('content-list-container');
+            let html = '';
+            
+            contentData.forEach(data => {
+                // If filter is Blog, only show days that HAVE a blog
+                if (filterType === 'Blog' && !data.blog) return;
+                // For other filters, check format
+                if (filterType !== 'All' && filterType !== 'Blog' && data.format !== filterType) return;
+                
+                let formatColorClass = '';
+                if(data.format === 'Post') formatColorClass = 'bg-gray-200 text-[#111111]';
+                if(data.format === 'Reels') formatColorClass = 'bg-[#111111] text-white';
+                if(data.format === 'Carousel') formatColorClass = 'bg-[#C5A059] text-white';
+
+                const feedAspectClass = data.format === 'Reels' ? 'aspect-[9/16]' : 'aspect-[4/5]';
+                const feedResText = data.format === 'Reels' ? '1080x1920px' : '1080x1350px';
+                
+                // Determine grid columns based on presence of Blog
+                const gridColsClass = data.blog ? 'lg:grid-cols-3' : 'lg:grid-cols-2';
+
+                html += `
+                    <div id="day-card-${data.day}" class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300">
+                       
+                       <!-- Header -->
+                       <div class="bg-gray-50 border-b border-gray-200 p-5 flex flex-col sm:flex-row justify-between sm:items-center gap-3">
+                           <h3 class="font-serif text-2xl text-[#111111]">Day ${data.day}: <span class="text-[#C5A059]">${data.title}</span></h3>
+                           <div class="flex flex-wrap gap-2">
+                               <span class="px-3 py-1 ${formatColorClass} text-xs font-bold tracking-widest uppercase rounded">${data.format}</span>
+                               ${data.blog ? `<span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold tracking-widest uppercase rounded">WP BLOG</span>` : ''}
+                           </div>
+                       </div>
+                       
+                       <div class="p-6">
+                           <!-- SEO & Meta Header -->
+                           <div class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm bg-gray-50 p-5 rounded border border-gray-100">
+                               <div><strong class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1">SEO Keywords</strong><span class="text-gray-700">${data.seo}</span></div>
+                               <div><strong class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1">Hashtags</strong><span class="text-blue-800 font-mono tracking-tight">${data.hashtags}</span></div>
+                           </div>
+
+                           <!-- Content Grid -->
+                           <div class="grid grid-cols-1 ${gridColsClass} gap-8 items-start">
+                               
+                               <!-- FEED COLUMN -->
+                               <div class="flex flex-col">
+                                   <div class="flex justify-between items-center mb-3">
+                                       <span class="font-bold text-xs uppercase tracking-widest">Feed Post</span>
+                                       <span class="text-[10px] bg-gray-200 text-gray-600 px-2 py-0.5 rounded font-mono">${feedResText}</span>
+                                   </div>
+                                   <div class="${feedAspectClass} w-full max-w-[320px] mx-auto bg-gray-100 rounded-lg overflow-hidden border border-gray-200 relative group/edit cursor-pointer">
+                                       <img id="feed-img-${data.day}" src="${data.feedImg}" class="w-full h-full object-cover" loading="lazy">
+                                       <div onclick="triggerUpload(${data.day}, 'feed')" class="absolute inset-0 bg-[#111111]/70 opacity-0 group-hover/edit:opacity-100 transition-opacity flex flex-col justify-center items-center backdrop-blur-sm text-white">
+                                            <span class="text-3xl mb-2 text-[#C5A059]">📸</span>
+                                            <span class="text-[10px] font-bold tracking-widest uppercase">Görsel Yükle</span>
+                                       </div>
+                                   </div>
+                                   <div class="mt-4 bg-[#EAF3FF] text-[#1E40AF] px-3 py-2 text-[10px] font-mono tracking-wide rounded border border-[#BFDBFE]">
+                                       Önerilen Dosya: <strong>${data.suggestedFile}</strong>
+                                   </div>
+                                   <p class="text-sm text-gray-700 font-light mt-4 whitespace-pre-line leading-relaxed">${data.caption}</p>
+                               </div>
+
+                               <!-- STORY COLUMN -->
+                               <div class="flex flex-col">
+                                   <div class="flex justify-between items-center mb-3">
+                                       <span class="font-bold text-xs uppercase tracking-widest text-[#C5A059]">24H Story</span>
+                                       <span class="text-[10px] bg-gray-200 text-gray-600 px-2 py-0.5 rounded font-mono">1080x1920px</span>
+                                   </div>
+                                   <div class="aspect-[9/16] w-full max-w-[250px] mx-auto bg-gray-100 rounded-lg overflow-hidden border border-gray-200 relative group/edit cursor-pointer">
+                                       <img id="story-img-${data.day}" src="${data.story.storyImg}" class="w-full h-full object-cover" loading="lazy">
+                                       <!-- UI Mockup -->
+                                       <div class="absolute top-3 left-3 flex gap-2"><div class="w-6 h-6 rounded-full bg-white/30 backdrop-blur"></div><div class="w-12 h-1 rounded-full bg-white/50 mt-2.5"></div></div>
+                                       
+                                       <div onclick="triggerUpload(${data.day}, 'story')" class="absolute inset-0 bg-[#111111]/70 opacity-0 group-hover/edit:opacity-100 transition-opacity flex flex-col justify-center items-center backdrop-blur-sm text-white">
+                                            <span class="text-3xl mb-2 text-[#C5A059]">📸</span>
+                                            <span class="text-[10px] font-bold tracking-widest uppercase">Görsel Yükle</span>
+                                       </div>
+                                   </div>
+                                   <div class="mt-4 bg-[#F3F4F6] text-[#4B5563] px-3 py-2 text-[10px] font-mono tracking-wide rounded border border-[#E5E7EB]">
+                                       Önerilen: <strong>${data.story.suggestedFile}</strong>
+                                   </div>
+                                   <p class="text-sm text-gray-800 font-light mt-4 text-center whitespace-pre-line leading-relaxed">${data.story.caption}</p>
+                                   <div class="mt-3 text-center">
+                                       <span class="inline-block bg-gray-100 border border-gray-200 text-[10px] px-3 py-1.5 uppercase tracking-widest font-semibold text-gray-600 rounded-full shadow-sm">
+                                           👉 ${data.story.interaction}
+                                       </span>
+                                   </div>
+                               </div>
+
+                               <!-- BLOG COLUMN (Conditional) -->
+                               ${data.blog ? `
+                               <div class="flex flex-col border-t lg:border-t-0 lg:border-l border-gray-200 pt-8 lg:pt-0 lg:pl-8">
+                                   <div class="flex justify-between items-center mb-3">
+                                       <span class="font-bold text-xs uppercase tracking-widest text-blue-800">WP Blog Post</span>
+                                       <span class="text-[10px] bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-mono">1200x630px</span>
+                                   </div>
+                                   <div class="aspect-[1200/630] w-full max-w-[400px] bg-gray-100 rounded-lg overflow-hidden border border-gray-200 relative group/edit cursor-pointer">
+                                       <img id="blog-img-${data.day}" src="${data.blog.blogImg}" class="w-full h-full object-cover" loading="lazy">
+                                       <div onclick="triggerUpload(${data.day}, 'blog')" class="absolute inset-0 bg-[#1E40AF]/80 opacity-0 group-hover/edit:opacity-100 transition-opacity flex flex-col justify-center items-center backdrop-blur-sm text-white">
+                                            <span class="text-3xl mb-2">🖼️</span>
+                                            <span class="text-[10px] font-bold tracking-widest uppercase">Kapak Yükle</span>
+                                       </div>
+                                   </div>
+                                   <div class="mt-4 bg-[#EAF3FF] text-[#1E40AF] px-3 py-2 text-[10px] font-mono tracking-wide rounded border border-[#BFDBFE]">
+                                       Önerilen: <strong>${data.blog.suggestedFile}</strong>
+                                   </div>
+                                   <h4 class="font-serif font-bold text-xl text-[#111111] mt-4 leading-tight">${data.blog.title}</h4>
+                                   <p class="text-sm text-gray-600 font-light mt-2 leading-relaxed">${data.blog.excerpt}</p>
+                                   <div class="mt-4">
+                                       <span class="text-[9px] uppercase tracking-widest text-gray-400 font-bold block mb-1">Blog SEO Focus</span>
+                                       <span class="text-[11px] text-blue-700 bg-blue-50 px-2 py-1 rounded inline-block">${data.blog.seo}</span>
+                                   </div>
+                               </div>
+                               ` : ''}
+
+                           </div>
+                       </div>
+                    </div>
+                `;
+            });
+            
+            if(html === '') {
+                html = `<div class="p-8 text-center text-gray-500 bg-white rounded-xl border border-gray-200">Bu formata ait içerik bulunmamaktadır.</div>`;
+            }
+            
+            container.innerHTML = html;
+        }
+
+        window.filterContent = function(type) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`filter-${type}`).classList.add('active');
+            renderContentList(type);
+        }
+
+        let formatChartInstance = null;
+
+        function renderChart() {
+            const chartCanvas = document.getElementById('formatChart');
+            if (!chartCanvas) return;
+
+            const counts = { Post: 0, Reels: 0, Carousel: 0, Blog: 0 };
+            contentData.forEach(d => {
+                counts[d.format]++;
+                if (d.blog) counts.Blog++;
+            });
+
+            const ctx = chartCanvas.getContext('2d');
+            Chart.defaults.font.family = "'Inter', sans-serif";
+            Chart.defaults.color = '#777';
+
+            if (formatChartInstance) {
+                formatChartInstance.destroy();
+            }
+
+            formatChartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Feed Posts', 'Feed Reels', 'Feed Carousels', 'WP Blogs'],
+                    datasets: [{
+                        data: [counts.Post, counts.Reels, counts.Carousel, counts.Blog],
+                        backgroundColor: ['#E5E7EB', '#111111', '#C5A059', '#1E3A8A'],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                font: { size: 12, weight: '500' },
+                                usePointStyle: true,
+                                pointStyle: 'rect'
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: '#111111',
+                            titleFont: { size: 13 },
+                            bodyFont: { size: 13 },
+                            padding: 12,
+                            cornerRadius: 0,
+                            callbacks: {
+                                label: function(context) {
+                                    return ` ${context.label}: ${context.raw} Adet`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGrid();
+            renderContentList();
+            setTimeout(() => {
+                renderChart();
+            }, 100);
+        });
+
+    </script>
+</body>
+</html>
